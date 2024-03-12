@@ -1,6 +1,8 @@
 package com.zipcodewilmington;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by leon on 1/29/18.
@@ -101,13 +103,29 @@ public class StringArrayUtils {
     public static String[] removeValue(String[] array, String valueToRemove) {
         return null;
     }
-
     /**
      * @param array array of chars
      * @return array of Strings with consecutive duplicates removes
      */ // TODO
     public static String[] removeConsecutiveDuplicates(String[] array) {
-        return null;
+        int index = 0;
+        // Iterate the remaining values
+        for(int i = 0; i < array.length; i++) {
+            // Compare current value to previous
+            int j;
+            for (j = 0; j < i; j++)
+            {
+                if(array[i].equals(array[j]))
+                {
+                    break;
+            }
+        }
+        if(j == i)
+        {
+            array[index++] = array[i];
+            }
+        }
+        return array;
     }
 
     /**
